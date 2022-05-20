@@ -16,6 +16,8 @@
   main {
     flex: 1;
     display: grid;
+    grid-column-gap: px(15);
+    grid-row-gap: px(15);
     grid-template:
       "video map map"
       "profile map map"
