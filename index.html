@@ -10,15 +10,14 @@
     const deviceHeight = document.documentElement.clientHeight
     const radio = deviceWidth / deviceHeight
     const designRadio = 16 / 9
-    let pageWidth
     //设计稿为16：9，使用rem方案适配
     //过宽时，通过高度确定宽度
     if (radio > designRadio) {
-      pageWidth = deviceHeight * designRadio
+      window.pageWidth = deviceHeight * designRadio
     } else {
-      pageWidth = deviceWidth
+      window.pageWidth = deviceWidth
     }
-    const pageHeight = pageWidth / designRadio
+    window.pageHeight = pageWidth / designRadio
     const rem = `<style>html{ font-size: ${pageWidth / 100}px}</style>`
     document.write(rem)
   </script>

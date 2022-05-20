@@ -1,3 +1,6 @@
 @function px($n) {
   @return $n / 2420 * 100rem;
 }
+.border{
+  border:  #db90a7 px(20) dotted;
+}

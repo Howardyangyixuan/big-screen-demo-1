@@ -6,7 +6,9 @@
   flex: 1;
   flex-direction: column;
   header {
-    text-align: center;
+    h1{
+      font-size: 3rem;
+    }
     font-family: 'Pacifico', cursive;
     font-size: 3rem;
     height: px(99);
@@ -40,6 +42,26 @@
     .section5{
       grid-area: box5;
       background: pink;
+    }
+    .category{
+      height: px(315);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2{
+        flex-shrink: 0;
+        font-size:px(16);
+        border: 1px solid white;
+        color: white;
+        border-bottom-left-radius: px(4);
+        border-bottom-right-radius: px(4);
+        //line-height: px(24);
+        padding: px(10) px(28);
+      }
+      .chart1{
+        flex:1;
+        width: 100%;
+      }
     }
   }
 }
