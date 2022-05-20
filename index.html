@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/src/favicon.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>用户数据可视化</title>
+  <script>
+    const deviceWidth = document.documentElement.clientWidth
+    const deviceHeight = document.documentElement.clientHeight
+    const radio = deviceWidth / deviceHeight
+    const designRadio = 16 / 9
+    let pageWidth
+    //设计稿为16：9，使用rem方案适配
+    //过宽时，通过高度确定宽度
+    if (radio > designRadio) {
+      pageWidth = deviceHeight * designRadio
+    } else {
+      pageWidth = deviceWidth
+    }
+    const pageHeight = pageWidth / designRadio
+    const rem = `<style>html{ font-size: ${pageWidth / 100}px}</style>`
+    document.write(rem)
+  </script>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  const root = document.getElementById("root")
+  root.style.width = pageWidth + "px"
+  root.style.height = pageHeight + "px"
+  //上下居中
+  root.style.marginTop = (deviceHeight - pageHeight) / 2 + "px"
+</script>
+<script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
