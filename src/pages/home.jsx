@@ -3,6 +3,9 @@ import "./home.scss"
 
 export const Home = () => {
   return (
-    <div>你好</div>
+    <div className="home">
+      <header>Silvia & Howard's Travel Plan</header>
+      <div className="child1">hi</div>
+    </div>
   )
 }

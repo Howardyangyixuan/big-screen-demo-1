@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  background: rgb(254, 252, 232);
+}
+
 body {
   font-size: 16px;
 }
 
 #root {
+  background: rgb(249, 226, 233);
   margin: 0 auto;
 }

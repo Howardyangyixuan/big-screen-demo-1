@@ -1,0 +1,17 @@
+@import "../shared/_helper.scss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.home {
+  header {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    height: px(99);
+  }
+}
+
+.child1 {
+  border: 1px solid red;
+  height: px(315);
+  width: px(367);
+}
