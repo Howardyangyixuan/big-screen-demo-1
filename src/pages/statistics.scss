@@ -1,7 +1,7 @@
 @import "../shared/_helper.scss";
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-.home {
+.statistics {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -17,32 +17,33 @@
     flex: 1;
     display: grid;
     grid-template:
-      "video map map"
-      "profile map map"
-      "intro slides notes";
+      "box1 box2 box4 box5" 755fr
+      "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
     .section1{
-      grid-area: video;
+      grid-area: box1;
       background: cornflowerblue;
     }
     .section2{
-      grid-area: map;
+      grid-area: box2;
       background: rgb(231, 140, 168);
     }
     .section3{
-      grid-area: profile;
+      grid-area: box3;
       background: papayawhip;
     }
     .section4{
-      grid-area: intro;
+      grid-area: box4;
       background: white;
     }
     .section5{
-      grid-area: slides;
+      grid-area: box5;
       background: pink;
     }
-    .section6{
-      grid-area: notes;
-      background: lightblue;
-    }
   }
+}
+
+.child1 {
+  border: 1px solid red;
+  height: px(315);
+  width: px(367);
 }

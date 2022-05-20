@@ -13,6 +13,14 @@ body {
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
   background: rgb(249, 226, 233);
   margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
