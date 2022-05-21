@@ -9,11 +9,11 @@ export const Chart4 = () => {
     const option = createEchartsOptions({
       xAxis: {
         type: "category",
-        data: ["00:00", "01:30", "06:00", "07:30", "09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00", "19:30", "21:00", "22:30","00:00"],
+        data: ["00:00", "01:30", "06:00", "07:30", "09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00", "19:30", "21:00", "22:30", "00:00"],
         axisLabel: {
           fontSize: px(12),
-          formatter(val){
-            return parseInt(val)+"点"
+          formatter(val) {
+            return parseInt(val) + "点"
           }
         },
       },
@@ -51,20 +51,26 @@ export const Chart4 = () => {
       },
       series: [
         {
+          symbol: "circle",
           name: "浏览量",
           type: "line",
           lineStyle: {
             color: "#5470C6",
-            width: 5
+            width: px(5)
           },
           data: [110, 80, 70, 90, 130, 120, 250, 310, 290, 210, 140, 190, 120, 250, 110],
           areaStyle: {},
           markArea: {
+            label: {
+              color:"#fff",
+              textBorderColor:"#111",
+              textBorderWidth:px(4)
+            },
             data: [
               [
                 {
                   name: "午高峰",
-                  xAxis: "12:00"
+                  xAxis: "12:00",
                 },
                 {
                   xAxis: "13:30"
@@ -84,8 +90,8 @@ export const Chart4 = () => {
                   name: "睡眠时间",
                   xAxis: "01:30",
                   itemStyle: {
-                    color: "#5871c0"
-                  }
+                    color: "#5871c0",
+                  },
                 },
                 {
                   xAxis: "06:00"
