@@ -11,6 +11,9 @@ function App() {
         <Route exact path="/" element={<Home/>}> </Route>
         <Route exact path="/analysis" element={<Statistics/>}> </Route>
       </Routes>
+      <footer>
+        &copy;羊一圈技术有限公司 2021-2026
+      </footer>
     </div>
   )
 }
