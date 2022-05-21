@@ -70,7 +70,7 @@ export const Chart2 = (props) => {
   }, [])
   return (
     <div className="category-comments border">
-      <h2>评论和点赞按类别统计</h2>
+      <h2 className="title-border">评论和点赞按类别统计</h2>
       <div className="chart2" ref={ref}/>
     </div>
   )

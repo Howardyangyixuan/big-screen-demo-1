@@ -28,6 +28,9 @@
 
     .section1 {
       grid-area: box1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .section2 {
@@ -60,10 +63,7 @@
       h2 {
         flex-shrink: 0;
         font-size: px(16);
-        border: 1px solid white;
-        color: white;
-        border-bottom-left-radius: px(4);
-        border-bottom-right-radius: px(4);
+        color:black;
         //line-height: px(24);
         padding: px(10) px(28);
       }
@@ -84,7 +84,6 @@
     }
 
     .category-comments {
-      margin-top: px(30);
       height: px(415);
 
     }

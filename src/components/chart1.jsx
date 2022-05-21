@@ -31,7 +31,7 @@ export const Chart1 = (props) => {
   }, [])
   return (
     <div className="category-views border">
-      <h2>浏览量按类别统计</h2>
+      <h2 className="title-border">浏览量按类别统计</h2>
       <div className="chart1" ref={ref}/>
     </div>
   )
