@@ -1,7 +1,5 @@
 import * as echarts from "echarts"
 import {useEffect, useRef} from "react"
-import {px} from "../shared/fn.js"
-import {echartsBaseOptions} from "../shared/echartsBaseOptions"
 import {createEchartsOptions} from "../shared/createEchartsOptions"
 
 export const Chart1 = (props) => {
@@ -30,9 +28,9 @@ export const Chart1 = (props) => {
 
   }, [])
   return (
-    <div className="category-views border">
+    <div className="category-views chart-wrapper border">
       <h2 className="title-border">浏览量按类别统计</h2>
-      <div className="chart1" ref={ref}/>
+      <div className="chart" ref={ref}/>
     </div>
   )
 }
