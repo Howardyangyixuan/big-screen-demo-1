@@ -3,6 +3,7 @@ import "./statistics.scss"
 import {Chart1} from "../components/chart1.jsx"
 import {Chart2} from "../components/chart2"
 import {Chart3} from "../components/chart3"
+import {Chart4} from "../components/chart4"
 
 export const Statistics = () => {
   return (
@@ -15,6 +16,7 @@ export const Statistics = () => {
         </section>
         <section className="section2">
           <Chart3/>
+          <Chart4/>
         </section>
         <section className="section3">3</section>
         <section className="section4">4</section>

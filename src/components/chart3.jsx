@@ -60,7 +60,7 @@ export const Chart3 = () => {
     myCharts.setOption(option)
   }, [])
   return (<div>
-    <div className="trends chart-wrapper border">
+    <div className="trends-likes chart-wrapper border">
       <h2 className="title-border">点赞趋势按类别统计</h2>
       <div className="chart" ref={ref}>hi</div>
     </div>

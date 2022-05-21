@@ -8,6 +8,7 @@ export const Chart2 = (props) => {
   useEffect(() => {
     const myChart = echarts.init(ref.current)
     const option = createEchartsOptions({
+      legend: {show: true},
       yAxis: {
         type: "category",
         data: ["旅行", "好物测评", "日常生活", "美食探店"],
@@ -16,7 +17,7 @@ export const Chart2 = (props) => {
         {
           name: "点赞",
           type: "bar",
-          data: [18.203, 23.489, 29.034, 10.470],
+          data: [193, 234, 311, 121],
           itemStyle: {
             borderRadius: [0, 5, 5, 0] //（顺时针左上，右上，右下，左下）
           },
@@ -37,7 +38,7 @@ export const Chart2 = (props) => {
         {
           name: "评论",
           type: "bar",
-          data: [19.325, 23.438, 31.100, 12.194],
+          data: [182, 234, 290, 104],
           itemStyle: {
             borderRadius: [0, 5, 5, 0] //（顺时针左上，右上，右下，左下）
           },

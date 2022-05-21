@@ -11,6 +11,11 @@ export const Chart1 = (props) => {
         type: "category",
         data: ["旅行", "好物测评", "日常生活", "美食探店"],
       },
+      yAxis:{
+        axisLabel: {
+          formatter: '{value}k'
+        },
+      },
       series: [
         {
           // color:['#697eb0'],

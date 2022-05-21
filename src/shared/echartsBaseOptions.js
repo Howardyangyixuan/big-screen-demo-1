@@ -12,7 +12,7 @@ function formatter(val) {
 
 export const echartsBaseOptions = {
   title: {show: false},
-  legend: {show: true},
+  legend: {show: false},
   tooltip: {
     trigger: "axis",
     axisPointer: {
