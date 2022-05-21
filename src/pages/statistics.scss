@@ -30,7 +30,6 @@
 
     .section3 {
       grid-area: box3;
-      background: papayawhip;
     }
 
     .section4 {
@@ -79,10 +78,10 @@
     }
 
     [class^="trends"] {
-      border-color: lightskyblue;
-      background: #db90a7;
+      border-color: deepskyblue;
+      background: pink;
       h2{
-        border-color: lightskyblue;
+        border-color: deepskyblue;
       }
     }
 
@@ -92,6 +91,11 @@
 
     .trends-time{
       height: px(315);
+    }
+
+    .views{
+      height: px(363);
+      background: papayawhip;
     }
   }
 }

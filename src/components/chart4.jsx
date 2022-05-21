@@ -35,17 +35,17 @@ export const Chart4 = () => {
           {
             gt: 1,
             lte: 2,
-            color: "green"
+            color: "#5871c0"
           },
           {
             gt: 5,
             lte: 8,
-            color: "red"
+            color: "#fb607f"
           },
           {
             gt: 11,
             lte: 14,
-            color: "red"
+            color: "#fb607f"
           }
         ]
       },
@@ -82,7 +82,10 @@ export const Chart4 = () => {
               [
                 {
                   name: "睡眠时间",
-                  xAxis: "01:30"
+                  xAxis: "01:30",
+                  itemStyle: {
+                    color: "#5871c0"
+                  }
                 },
                 {
                   xAxis: "06:00"

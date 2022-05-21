@@ -13,6 +13,7 @@ function formatter(val) {
 export const echartsBaseOptions = {
   title: {show: false},
   legend: {show: false},
+  color:["#e0115f","#65bef9","#fb607f","#5871c0"],
   tooltip: {
     trigger: "axis",
     axisPointer: {

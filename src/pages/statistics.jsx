@@ -4,6 +4,7 @@ import {Chart1} from "../components/chart1.jsx"
 import {Chart2} from "../components/chart2"
 import {Chart3} from "../components/chart3"
 import {Chart4} from "../components/chart4"
+import {Chart5} from "../components/chart5"
 
 export const Statistics = () => {
   return (
@@ -18,7 +19,9 @@ export const Statistics = () => {
           <Chart3/>
           <Chart4/>
         </section>
-        <section className="section3">3</section>
+        <section className="section3">
+          <Chart5/>
+        </section>
         <section className="section4">4</section>
         <section className="section5">5</section>
       </main>
