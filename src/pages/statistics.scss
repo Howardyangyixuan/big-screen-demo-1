@@ -34,7 +34,6 @@
 
     .section4 {
       grid-area: box4;
-      background: white;
     }
 
     .section5 {
@@ -99,8 +98,20 @@
     }
 
     .map{
-      height: px(700);
-      background: papayawhip;
+      height: px(1134);
+      //黑色背景
+      //border-color: #efe2a8;
+      //h2 {
+      //  color: white;
+      //  border-color: #efe2a8;
+      //}
+      //background:black;
+      border-color: black;
+      h2 {
+        color: black;
+        border-color: black;
+      }
+      background:papayawhip;
     }
   }
 }
