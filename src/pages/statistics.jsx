@@ -7,6 +7,7 @@ import {Chart4} from "../components/chart4"
 import {Chart5} from "../components/chart5"
 import {Chart6} from "../components/chart6"
 import {Chart7} from "../components/chart7"
+import {Chart8} from "../components/chart8"
 
 export const Statistics = () => {
   return (
@@ -32,7 +33,7 @@ export const Statistics = () => {
             <h2 className="title-border">用户分析</h2>
             <div className="chart-horizontal-wrapper">
               <Chart7/>
-              <Chart7/>
+              <Chart8/>
             </div>
           </div>
         </section>
