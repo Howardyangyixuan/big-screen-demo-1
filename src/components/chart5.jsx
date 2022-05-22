@@ -34,6 +34,7 @@ export const Chart5 = () => {
       },
       calendar: [
         {
+          cellSize: px(30),
           top:px(40),
           left: "center",
           range: ["2022-01-01", "2022-06-01"],
@@ -41,13 +42,13 @@ export const Chart5 = () => {
             show: true,
             lineStyle: {
               color: "#000",
-              width: 3,
+              width: px(3),
               type: "solid"
             }
           },
           itemStyle: {
             color:"#111",
-            borderWidth: 1,
+            borderWidth: px(1),
             borderColor: "#111"
           }
         },
@@ -59,7 +60,7 @@ export const Chart5 = () => {
           coordinateSystem: "calendar",
           data: data,
           symbolSize: function (val) {
-            return val[1] / px(1000)
+            return val[1] / 1000 * px(2)
           },
           itemStyle: {
             color: "#f3c2cb"
@@ -75,7 +76,7 @@ export const Chart5 = () => {
             })
             .slice(0, 12),
           symbolSize: function (val) {
-            return val[1] / px(1000)
+            return val[1] / 1000 * px(2)
           },
           showEffectOn: "render",
           rippleEffect: {
