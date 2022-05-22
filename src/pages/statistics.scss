@@ -15,11 +15,12 @@
       "box1 box2 box4 box5" 755fr
       "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
 
-    section{
+    section {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+
     .section1 {
       grid-area: box1;
     }
@@ -62,7 +63,8 @@
     [class^="category"] {
       border-color: #db90a7;
       background: lightskyblue;
-      h2{
+
+      h2 {
         border-color: #db90a7;
       }
     }
@@ -79,25 +81,26 @@
     [class^="trends"] {
       border-color: deepskyblue;
       background: pink;
-      h2{
+
+      h2 {
         border-color: deepskyblue;
       }
     }
 
-    .trends-likes{
+    .trends-likes {
       height: px(415);
     }
 
-    .trends-time{
+    .trends-time {
       height: px(315);
     }
 
-    .views{
+    .views {
       height: px(363);
       background: papayawhip;
     }
 
-    .map{
+    .map {
       height: px(1134);
       //黑色背景
       //border-color: #efe2a8;
@@ -107,11 +110,29 @@
       //}
       //background:black;
       border-color: black;
+
       h2 {
         color: black;
         border-color: black;
       }
-      background:papayawhip;
+
+      background: papayawhip;
+    }
+
+    .user {
+      height: px(363);
+
+      > h2 {
+        position: absolute;
+      }
+    }
+
+    .chart-horizontal-wrapper {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+
     }
   }
 }

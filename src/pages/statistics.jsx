@@ -6,6 +6,7 @@ import {Chart3} from "../components/chart3"
 import {Chart4} from "../components/chart4"
 import {Chart5} from "../components/chart5"
 import {Chart6} from "../components/chart6"
+import {Chart7} from "../components/chart7"
 
 export const Statistics = () => {
   return (
@@ -26,7 +27,15 @@ export const Statistics = () => {
         <section className="section4">
           <Chart6/>
         </section>
-        <section className="section5">5</section>
+        <section className="section5">
+          <div className="user border chart-wrapper">
+            <h2 className="title-border">用户分析</h2>
+            <div className="chart-horizontal-wrapper">
+              <Chart7/>
+              <Chart7/>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )
