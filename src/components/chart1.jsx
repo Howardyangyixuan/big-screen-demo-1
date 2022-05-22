@@ -1,12 +1,12 @@
 import * as echarts from "echarts"
 import {useEffect, useRef} from "react"
-import {createEchartsOptions} from "../shared/createEchartsOptions"
+import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 
-export const Chart1 = (props) => {
+export const Chart1 = () => {
   const ref = useRef(null)
   useEffect(() => {
     const myChart = echarts.init(ref.current)
-    const option = createEchartsOptions({
+    const option = createEchartsXYOptions({
       xAxis: {
         type: "category",
         data: ["旅行", "好物测评", "日常生活", "美食探店"],

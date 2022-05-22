@@ -1,14 +1,17 @@
 import * as echarts from "echarts"
 import {useEffect, useRef} from "react"
 import {px} from "../shared/fn.js"
-import {createEchartsOptions} from "../shared/createEchartsOptions"
+import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 
-export const Chart2 = (props) => {
+export const Chart2 = () => {
   const ref = useRef(null)
   useEffect(() => {
     const myChart = echarts.init(ref.current)
-    const option = createEchartsOptions({
-      legend: {show: true},
+    const option = createEchartsXYOptions({
+      legend: {
+        itemWidth: px(40),
+        itemHeight: px(20),
+      },
       yAxis: {
         type: "category",
         data: ["旅行", "好物测评", "日常生活", "美食探店"],

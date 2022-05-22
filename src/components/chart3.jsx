@@ -1,12 +1,12 @@
 import {useEffect, useRef} from "react"
 import * as echarts from "echarts"
-import {createEchartsOptions} from "../shared/createEchartsOptions"
+import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 import {px} from "../shared/fn"
 
 export const Chart3 = () => {
   const ref = useRef(null)
   useEffect(() => {
-    const option = createEchartsOptions({
+    const option = createEchartsXYOptions({
       tooltip: {
         trigger: "axis"
       },

@@ -1,6 +1,7 @@
 import {useEffect, useRef} from "react"
 import * as echarts from "echarts"
 import {px} from "../shared/fn"
+import {createEchartsOptions} from "../shared/createEchartsOptions"
 
 export const Chart5 = () => {
   const ref = useRef(null)
@@ -21,7 +22,7 @@ export const Chart5 = () => {
     }
 
     const data = getVirtulData("2022")
-    const options = {
+    const options = createEchartsOptions({
       title: {show: false},
       tooltip: {
         formatter: function (params) {
@@ -35,7 +36,7 @@ export const Chart5 = () => {
       calendar: [
         {
           cellSize: px(30),
-          top:px(40),
+          top: px(40),
           left: "center",
           range: ["2022-01-01", "2022-06-01"],
           splitLine: {
@@ -47,7 +48,7 @@ export const Chart5 = () => {
             }
           },
           itemStyle: {
-            color:"#111",
+            color: "#111",
             borderWidth: px(1),
             borderColor: "#111"
           }
@@ -90,7 +91,7 @@ export const Chart5 = () => {
           zlevel: 1
         }
       ]
-    }
+    })
     const myChart = echarts.init(ref.current)
     myChart.setOption(options)
   }, [])

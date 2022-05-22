@@ -2,7 +2,7 @@ import {useEffect, useRef} from "react"
 import * as echarts from "echarts"
 import {px} from "../shared/fn"
 import geoJSON from "../geo/100000_full.json"
-import {createEchartsOptions} from "../shared/createEchartsOptions"
+import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 
 export const Chart6 = () => {
   const ref = useRef(null)
@@ -13,7 +13,7 @@ export const Chart6 = () => {
     // })
     const myChart = echarts.init(ref.current)
     echarts.registerMap("China", geoJSON)
-    const option = createEchartsOptions({
+    const option = createEchartsXYOptions({
       tooltip: {
         // formatter: "{b}:{c}人"
       },

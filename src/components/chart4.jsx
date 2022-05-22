@@ -1,12 +1,12 @@
 import {useEffect, useRef} from "react"
-import {createEchartsOptions} from "../shared/createEchartsOptions"
+import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 import * as echarts from "echarts"
 import {px} from "../shared/fn"
 
 export const Chart4 = () => {
   const ref = useRef(null)
   useEffect(() => {
-    const option = createEchartsOptions({
+    const option = createEchartsXYOptions({
       xAxis: {
         type: "category",
         data: ["00:00", "01:30", "06:00", "07:30", "09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00", "19:30", "21:00", "22:30", "00:00"],
