@@ -7,7 +7,7 @@ import {virtualData, videoColors} from "../data/getVirtualData"
 export const Chart9 = (props) => {
   const ref = useRef(null)
   let type = props.type === "comment" ? 1 : 2
-  const positionSetting = props.position === "right" ?
+  const settings = props.position === "right" ?
     {
       xInverse: true,
       yPosition: "right",
@@ -59,9 +59,15 @@ export const Chart9 = (props) => {
           return d[dateIndex] === startDate
         })
       },
-      tooltip: {show: false},
+      tooltip: {
+        show: true,
+        formatter(val) {
+          console.log(val.value[type])
+          return val.value[dimensionY] + "<br>" + settings.title.text + val.value[dimensionX]
+        }
+      },
       toolbox: {
-        ...positionSetting.toolbox,
+        ...settings.toolbox,
         bottom: px(70),
         feature: {
           myReplay: {
@@ -76,7 +82,7 @@ export const Chart9 = (props) => {
         }
       },
       title: {
-        ...positionSetting.title,
+        ...settings.title,
         top: px(10),
         textStyle: {
           fontSize: px(20)
@@ -90,12 +96,12 @@ export const Chart9 = (props) => {
       },
       xAxis: {
         max: 1500,
-        inverse: positionSetting.xInverse
+        inverse: settings.xInverse
       },
       yAxis: {
         type: "category",
         inverse: true,
-        position: positionSetting.position,
+        position: settings.position,
         max: 4,
         axisLabel: {
           inside: true,
@@ -130,7 +136,7 @@ export const Chart9 = (props) => {
             z: 2,
             show: true,
             precision: 0,
-            position: positionSetting.labelPosition,
+            position: settings.labelPosition,
             formatter: `{b}:{@[${dimensionX}]}`,
             valueAnimation: true,
             fontFamily: "monospace"
@@ -146,7 +152,7 @@ export const Chart9 = (props) => {
         elements: [
           {
             type: "text",
-            ...positionSetting.graphic,
+            ...settings.graphic,
             bottom: px(30),
             style: {
               text: startDate,
@@ -169,7 +175,7 @@ export const Chart9 = (props) => {
     for (let id of setTimeOutId) {
       clearTimeout(id)
     }
-    for (let i = startIndex; i < dates.length ; ++i) {
+    for (let i = startIndex; i < dates.length; ++i) {
       (function (i) {
         const id = setTimeout(function () {
           updateDate(dates[i])
