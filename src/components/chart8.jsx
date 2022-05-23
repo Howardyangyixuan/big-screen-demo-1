@@ -18,7 +18,7 @@ export const Chart8 = () => {
         {
           name: "用户年龄分布",
           type: "pie",
-          radius: ["50%", "70%"],
+          radius: ["55%", "70%"],
           top:-px(50),
           // left: "0%",
           // bottom: "20%",
