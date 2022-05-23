@@ -118,12 +118,14 @@
       background: papayawhip;
     }
 
-    .user {
-      height: px(315);
-
+    .user, .dynamic, .subscribe {
       > h2 {
         position: absolute;
       }
+    }
+
+    .user {
+      height: px(315);
     }
 
     .chart-horizontal-wrapper {
@@ -136,10 +138,6 @@
     .dynamic {
       height: px(415);
       position: relative;
-
-      > h2 {
-        position: absolute;
-      }
 
       select {
         position: absolute;
@@ -182,8 +180,8 @@
       }
     }
 
-    .table{
-      height:px(363)
+    .subscribe {
+      height: px(363)
     }
   }
 }
