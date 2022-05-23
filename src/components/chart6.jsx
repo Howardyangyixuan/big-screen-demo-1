@@ -109,7 +109,6 @@ export const Chart6 = () => {
           },
           tooltip: {
             formatter(val){
-              console.log(val)
               return `${val.value.name} <br/> ${val.value.value}人`
             }
           }

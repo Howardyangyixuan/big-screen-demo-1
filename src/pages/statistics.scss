@@ -132,5 +132,55 @@
       display: flex;
       flex-direction: row;
     }
+
+    .dynamic {
+      height: px(315);
+      position: relative;
+
+      > h2 {
+        position: absolute;
+      }
+
+      select {
+        position: absolute;
+        outline: none;
+
+        display: inline-block;
+        vertical-align: middle;
+        //overflow: hidden;
+        color: #555;
+        text-shadow: none;
+        border-radius: 4px;
+        transition: box-shadow 0.25s ease;
+        z-index: 2;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+
+        &:hover {
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      //隐藏滚动条，但仍可以滚动
+      ::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+      }
+
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+
+
+      .left {
+        left: 40%;
+        top: 50%;
+      }
+
+      .right {
+        right: 40%;
+        top: 50%;
+      }
+    }
+
   }
 }

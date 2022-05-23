@@ -8,6 +8,7 @@ import {Chart5} from "../components/chart5"
 import {Chart6} from "../components/chart6"
 import {Chart7} from "../components/chart7"
 import {Chart8} from "../components/chart8"
+import {Chart9} from "../components/chart9"
 
 export const Statistics = () => {
   return (
@@ -34,6 +35,13 @@ export const Statistics = () => {
             <div className="chart-horizontal-wrapper">
               <Chart7/>
               <Chart8/>
+            </div>
+          </div>
+          <div className="dynamic border chart-wrapper">
+            <h2 className="title-border">发布10日内浏览量和点赞变化趋势</h2>
+            <div className="chart-horizontal-wrapper">
+              <Chart9 className="left" type={"comment"}/>
+              <Chart9 position="right" className="right"/>
             </div>
           </div>
         </section>
