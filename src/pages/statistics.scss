@@ -119,7 +119,7 @@
     }
 
     .user {
-      height: px(415);
+      height: px(315);
 
       > h2 {
         position: absolute;
@@ -134,7 +134,7 @@
     }
 
     .dynamic {
-      height: px(315);
+      height: px(415);
       position: relative;
 
       > h2 {
@@ -182,5 +182,8 @@
       }
     }
 
+    .table{
+      height:px(363)
+    }
   }
 }

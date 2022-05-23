@@ -7,7 +7,6 @@ import {Chart4} from "../components/chart4"
 import {Chart5} from "../components/chart5"
 import {Chart6} from "../components/chart6"
 import {Chart7} from "../components/chart7"
-import {Chart8} from "../components/chart8"
 import {Chart9} from "../components/chart9"
 
 export const Statistics = () => {
@@ -30,18 +29,25 @@ export const Statistics = () => {
           <Chart6/>
         </section>
         <section className="section5">
-          <div className="user border chart-wrapper">
-            <h2 className="title-border">用户分析</h2>
-            <div className="chart-horizontal-wrapper">
-              <Chart7/>
-              <Chart8/>
-            </div>
-          </div>
           <div className="dynamic border chart-wrapper">
             <h2 className="title-border">发布10日内浏览量和点赞变化趋势</h2>
             <div className="chart-horizontal-wrapper">
               <Chart9 className="left" type={"comment"}/>
               <Chart9 position="right" className="right"/>
+            </div>
+          </div>
+          <div className="user border chart-wrapper">
+            <h2 className="title-border">用户分析</h2>
+            <div className="chart-horizontal-wrapper">
+              <Chart7 type="age"/>
+              <Chart7/>
+            </div>
+          </div>
+          <div className="table border chart-wrapper">
+            <h2 className="title-border">用户分析</h2>
+            <div className="chart-horizontal-wrapper">
+              <Chart7 type="age"/>
+              <Chart7/>
             </div>
           </div>
         </section>
