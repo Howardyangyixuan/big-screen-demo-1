@@ -8,6 +8,7 @@ import {Chart5} from "../components/chart5"
 import {Chart6} from "../components/chart6"
 import {Chart7} from "../components/chart7"
 import {Chart9} from "../components/chart9"
+import {Chart10} from "../components/Chart10"
 
 export const Statistics = () => {
   return (
@@ -43,12 +44,9 @@ export const Statistics = () => {
               <Chart7/>
             </div>
           </div>
-          <div className="table border chart-wrapper">
-            <h2 className="title-border">用户分析</h2>
-            <div className="chart-horizontal-wrapper">
-              <Chart7 type="age"/>
-              <Chart7/>
-            </div>
+          <div className="subscribe border chart-wrapper">
+            <h2 className="title-border">视频效果分析</h2>
+            <Chart10/>
           </div>
         </section>
       </main>
