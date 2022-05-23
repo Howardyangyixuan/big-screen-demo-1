@@ -13,9 +13,12 @@ export const Chart9 = (props) => {
       yPosition: "right",
       labelPosition: "insideRight",
       graphic: {right: "68%"},
-      title:{
+      title: {
         text: "点赞数",
         right: px(10),
+      },
+      toolbox: {
+        left: "left",
       }
     }
     :
@@ -24,9 +27,12 @@ export const Chart9 = (props) => {
       yPosition: "left",
       labelPosition: "insideLeft",
       graphic: {left: "68%"},
-      title:{
+      title: {
         text: "浏览量",
         left: px(10),
+      },
+      toolbox: {
+        left: "right",
       }
     }
 
@@ -54,6 +60,21 @@ export const Chart9 = (props) => {
         })
       },
       tooltip: {show: false},
+      toolbox: {
+        ...positionSetting.toolbox,
+        bottom: px(70),
+        feature: {
+          myReplay: {
+            show: true,
+            title: "replay",
+            icon: "path://M17.65,6.35C16.2,4.9,14.21,4,12,4c-4.42,0-7.99,3.58-7.99,8s3.57,8,7.99,8c3.73,0,6.84-2.55,7.73-6h-2.08c-.82,2.33-3.04,4-5.65,4-3.31,0-6-2.69-6-6s2.69-6,6-6c1.66,0,3.14.69,4.22,1.78L13,11h7V4l-2.35,2.35z",
+            onclick: function () {
+              animate()
+            }
+          },
+          saveAsImage: {}
+        }
+      },
       title: {
         ...positionSetting.title,
         top: px(10),
@@ -140,15 +161,22 @@ export const Chart9 = (props) => {
   )
   useEffect(() => {
     myChart = echarts.init(ref.current)
-    myChart.setOption(option)
+    // myChart.setOption(option)
+    animate()
   }, [])
-  for (let i = startIndex; i < dates.length - 1; ++i) {
-    (function (i) {
-      const id = setTimeout(function () {
-        updateDate(dates[i + 1])
-      }, (i - startIndex + 1) * updateFrequency)
-      setTimeOutId.push(id)
-    })(i)
+
+  function animate() {
+    for (let id of setTimeOutId) {
+      clearTimeout(id)
+    }
+    for (let i = startIndex; i < dates.length ; ++i) {
+      (function (i) {
+        const id = setTimeout(function () {
+          updateDate(dates[i])
+        }, (i - startIndex) * updateFrequency)
+        setTimeOutId.push(id)
+      })(i)
+    }
   }
 
   function updateDate(date) {

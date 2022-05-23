@@ -38,7 +38,7 @@ export const Chart10 = () => {
       legend: {
         data: ["播放量", "新增关注"],
         top: "5%",
-        left: "5%"
+        left: "0%"
       },
       dataZoom: [
         {
