@@ -2,7 +2,7 @@ import {useCallback, useEffect, useRef} from "react"
 import * as echarts from "echarts"
 import {px} from "../shared/fn.js"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
-import {virtualData, videoColors} from "../shared/getVirtualData"
+import {virtualData, videoColors} from "../data/getVirtualData"
 
 export const Chart9 = (props) => {
   const ref = useRef(null)
@@ -173,7 +173,6 @@ export const Chart9 = (props) => {
   const select =
     useCallback(
       () => {
-        console.log("hi")
         const result = []
         for (let i = 1; i <= 10; i++) {
           result.push(<option key={i} value={"第" + i + "天"}>{"第" + i + "天"}</option>)
