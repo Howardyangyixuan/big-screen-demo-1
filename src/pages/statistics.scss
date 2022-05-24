@@ -59,73 +59,36 @@
       width: 100%;
     }
 
-    [class^="category"] {
-      border-color: #db90a7;
-      background: lightskyblue;
-
-      h2 {
-        border-color: #db90a7;
-      }
+    [class^="category"], .dynamic {
+      background: #a4d0f0;
     }
 
-    .category-views {
-      height: px(315);
+    .category-views, .trends-time, .user {
+      height: px(330);
     }
 
-    .category-comments {
+    .category-comments, .trends-likes, .dynamic {
       height: px(415);
 
     }
 
-    [class^="trends"] {
-      border-color: deepskyblue;
+    [class^="trends"], .user {
       background: pink;
-
-      h2 {
-        border-color: deepskyblue;
-      }
     }
 
-    .trends-likes {
-      height: px(415);
-    }
-
-    .trends-time {
-      height: px(315);
-    }
-
-    .views {
+    .views, .subscribe {
       height: px(363);
       background: papayawhip;
     }
 
     .map {
-      height: px(1134);
-      //黑色背景
-      //border-color: #efe2a8;
-      //h2 {
-      //  color: white;
-      //  border-color: #efe2a8;
-      //}
-      //background:black;
-      border-color: black;
-
-      h2 {
-        color: black;
-        border-color: black;
-      }
-
-      background: papayawhip;
+      height: px(1141);
     }
 
     .user, .dynamic, .subscribe {
       > h2 {
         position: absolute;
       }
-    }
-
-    .user {
-      height: px(315);
     }
 
     .chart-horizontal-wrapper {
@@ -136,7 +99,6 @@
     }
 
     .dynamic {
-      height: px(415);
       position: relative;
 
       select {
@@ -184,8 +146,5 @@
       }
     }
 
-    .subscribe {
-      height: px(363)
-    }
   }
 }
