@@ -1,5 +1,23 @@
 import {useEffect, useRef} from "react"
-import * as echarts from "echarts"
+import * as echarts from "echarts/core"
+import {
+  ToolboxComponent,
+  DatasetComponent,
+  GraphicComponent,
+  VisualMapComponent,
+} from "echarts/components"
+import {MapChart} from "echarts/charts"
+import {CanvasRenderer} from "echarts/renderers"
+
+echarts.use([
+  ToolboxComponent,
+  DatasetComponent,
+  GraphicComponent,
+  VisualMapComponent,
+  MapChart,
+  CanvasRenderer
+])
+
 import {px} from "../shared/fn"
 import geoJSON from "../geo/100000_full.json"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
@@ -7,10 +25,6 @@ import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 export const Chart6 = () => {
   const ref = useRef(null)
   useEffect(() => {
-    // const myChart = echarts.init(ref.current, null, {
-    //   renderer: "canvas",
-    //   useDirtyRect: false
-    // })
     const myChart = echarts.init(ref.current)
     echarts.registerMap("China", geoJSON)
     const option = createEchartsXYOptions({

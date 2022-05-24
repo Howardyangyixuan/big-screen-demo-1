@@ -1,5 +1,10 @@
 import {useEffect, useRef} from "react"
-import * as echarts from "echarts"
+import * as echarts from "echarts/core"
+import {CanvasRenderer} from "echarts/renderers"
+
+echarts.use([
+  CanvasRenderer,
+])
 import {px} from "../shared/fn.js"
 import {createEchartsOptions} from "../shared/createEchartsOptions"
 import {getUser} from "../data/getUser"
@@ -17,9 +22,9 @@ export const Chart7 = (props) => {
     const myChart = echarts.init(ref.current)
     const option = createEchartsOptions({
       legend: {
-        itemGap:px(10),
-        textStyle:{
-          fontSize:px(20)
+        itemGap: px(10),
+        textStyle: {
+          fontSize: px(20)
         },
         top: "bottom",
         left: "center",

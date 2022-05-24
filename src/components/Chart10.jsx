@@ -1,6 +1,15 @@
 import {getSubscribe} from "../data/getSubscribe"
 import {useEffect, useRef} from "react"
-import * as echarts from "echarts"
+import * as echarts from 'echarts/core';
+import {
+  DataZoomComponent,
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  DataZoomComponent,
+  CanvasRenderer,
+]);
 import {createEchartsOptions} from "../shared/createEchartsOptions"
 import {px} from "../shared/fn"
 

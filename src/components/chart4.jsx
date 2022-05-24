@@ -1,6 +1,15 @@
 import {useEffect, useRef} from "react"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
-import * as echarts from "echarts"
+import * as echarts from "echarts/core"
+import {
+  MarkAreaComponent
+} from "echarts/components"
+import {CanvasRenderer} from "echarts/renderers"
+
+echarts.use([
+  MarkAreaComponent,
+  CanvasRenderer,
+])
 import {px} from "../shared/fn"
 
 export const Chart4 = () => {

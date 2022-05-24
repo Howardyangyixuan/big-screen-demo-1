@@ -1,4 +1,11 @@
-import * as echarts from "echarts"
+import * as echarts from 'echarts/core';
+import { BarChart } from 'echarts/charts';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  BarChart,
+  CanvasRenderer
+]);
 import {useEffect, useRef} from "react"
 import {px} from "../shared/fn.js"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"

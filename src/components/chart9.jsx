@@ -1,5 +1,17 @@
 import {useCallback, useEffect, useRef} from "react"
-import * as echarts from "echarts"
+import * as echarts from 'echarts/core';
+import { TooltipComponent, LegendComponent } from 'echarts/components';
+import { PieChart } from 'echarts/charts';
+import { LabelLayout } from 'echarts/features';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  TooltipComponent,
+  LegendComponent,
+  PieChart,
+  CanvasRenderer,
+  LabelLayout
+]);
 import {px} from "../shared/fn.js"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 import {virtualData, videoColors} from "../data/getVirtualData"

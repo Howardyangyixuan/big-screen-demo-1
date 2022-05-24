@@ -1,5 +1,13 @@
 import {useEffect, useRef} from "react"
-import * as echarts from "echarts"
+import * as echarts from "echarts/core"
+import {LineChart} from "echarts/charts"
+import {CanvasRenderer} from "echarts/renderers"
+
+echarts.use([
+  LineChart,
+  CanvasRenderer,
+])
+
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 import {px} from "../shared/fn"
 
@@ -20,7 +28,7 @@ export const Chart3 = () => {
         textStyle: {
           fontSize: px(20)
         },
-        itemGap:px(15),
+        itemGap: px(15),
         itemWidth: px(20),
         itemHeight: px(20),
       },

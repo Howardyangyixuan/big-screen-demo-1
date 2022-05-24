@@ -1,4 +1,8 @@
-import * as echarts from "echarts"
+import * as echarts from "echarts/core"
+import {CanvasRenderer} from "echarts/renderers"
+
+echarts.use([CanvasRenderer])
+
 import {useEffect, useRef} from "react"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
 import {px} from "../shared/fn"

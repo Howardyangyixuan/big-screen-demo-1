@@ -1,5 +1,19 @@
 import {useEffect, useRef} from "react"
-import * as echarts from "echarts"
+import * as echarts from "echarts/core"
+import {
+  TitleComponent,
+  CalendarComponent,
+} from "echarts/components"
+import {ScatterChart, EffectScatterChart} from "echarts/charts"
+import {CanvasRenderer} from "echarts/renderers"
+
+echarts.use([
+  TitleComponent,
+  CalendarComponent,
+  ScatterChart,
+  EffectScatterChart,
+  CanvasRenderer,
+])
 import {px} from "../shared/fn"
 import {createEchartsOptions} from "../shared/createEchartsOptions"
 
@@ -23,7 +37,6 @@ export const Chart5 = () => {
 
     const data = getVirtulData("2022")
     const options = createEchartsOptions({
-      title: {show: false},
       tooltip: {
         formatter: function (params) {
           return params.value[0] + "浏览量: " + params.value[1]
