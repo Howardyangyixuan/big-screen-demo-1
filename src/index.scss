@@ -1,5 +1,7 @@
 @import "./shared/_helper.scss";
 
+$title: "旅行日记";
+
 * {
   margin: 0;
   padding: 0;
@@ -33,10 +35,52 @@ footer {
   font-size: 1rem;
 }
 
-header > h1 {
-  text-align: center;
+header {
   font-family: 'Pacifico', cursive;
-  font-size: 3rem;
   height: px(120);
-  margin: 0 auto 5px;
+  position: relative;
+  white-space: nowrap;
+
+  h1 {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: #ce3260;
+
+    &::before {
+      content: "Silvia & Howard's Travel Plan Statistics";
+      position: absolute;
+      color: transparent;
+      background-image: repeating-linear-gradient(
+          45deg,
+          transparent 0,
+          transparent px(2),
+          #86d0fa px(2),
+          #86d0fa px(4)
+      );
+      -webkit-background-clip: text;
+      top: px(3);
+      left: px(3);
+      z-index: -1;
+    }
+
+    &::after {
+      content: "Silvia & Howard's Travel Plan Statistics";
+      position: absolute;
+      color: transparent;
+      background-image: repeating-linear-gradient(
+          135deg,
+          transparent 0,
+          transparent px(2),
+          white px(2),
+          white px(4)
+      );
+      -webkit-background-clip: text;
+      top: px(-3);
+      left: px(-3);
+    }
+  }
 }
