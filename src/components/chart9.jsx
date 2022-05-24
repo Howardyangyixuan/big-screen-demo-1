@@ -98,7 +98,14 @@ export const Chart9 = (props) => {
       },
       xAxis: {
         max: 1500,
-        inverse: settings.xInverse
+        inverse: settings.xInverse,
+        splitLine: {
+          show: true,
+          lineStyle: {
+            type: "dashed",
+            opacity: 0.75
+          },
+        }
       },
       yAxis: {
         type: "category",
