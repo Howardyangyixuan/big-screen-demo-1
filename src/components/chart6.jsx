@@ -23,7 +23,32 @@ export const Chart6 = () => {
         left: "right",
         top: "center",
         feature: {
-          dataView: {readOnly: false},
+          dataView: {
+            readOnly: true,
+            optionToContent(opt) {
+              console.log(opt)
+              const name = opt.series[0].name
+              let table = "<table class=\"table\"><thead><tr>"
+                + "<th>地区</th>"
+                + "<th>" + name + "</th>"
+                + "</tr>"
+                + "</thead>"
+
+              const dataset = opt.dataset[0].source
+              for (let i = 0; i < dataset.length; i++) {
+                const data = dataset[i]
+                table += "<tr>"
+                  + "<td>" + data.name + "</td>"
+                  + "<td>" + data.value + "</td>"
+                  + "</tr>"
+              }
+              return table
+            },
+            buttonColor: "#ce3260",
+            text: "",
+            textColor: "#ce3260",
+            backgroundColor: "#f5e3e9",
+          },
           restore: {},
           saveAsImage: {}
         },
@@ -35,8 +60,8 @@ export const Chart6 = () => {
           lineStyle: {color: "#FFF"}
         },
       },
-      label:{
-        fontSize:px(16),
+      label: {
+        fontSize: px(16),
       },
       grid: {
         left: "10%",
