@@ -9,6 +9,9 @@ export const Chart2 = () => {
     const myChart = echarts.init(ref.current)
     const option = createEchartsXYOptions({
       legend: {
+        textStyle: {
+          fontSize: px(20),
+        },
         itemWidth: px(40),
         itemHeight: px(20),
       },
@@ -60,13 +63,6 @@ export const Chart2 = () => {
           }
         }
       ],
-      grid: {
-        x: px(40),
-        y: px(40),
-        x2: px(40),
-        y2: px(40),
-        // containLabel: true
-      },
     })
     myChart.setOption(option)
 

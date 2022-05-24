@@ -17,7 +17,8 @@ export const echartsXYBaseOptions = {
       lineStyle: {color: "#000000"}
     },
     axisLabel: {
-      fontSize: px(12),
+      margin: px(5),
+      fontSize: px(16),
       formatter(val) {
         return formatter(val)
       }
@@ -29,7 +30,8 @@ export const echartsXYBaseOptions = {
       lineStyle: {color: "#000000"}
     },
     axisLabel: {
-      fontSize: px(12),
+      margin:px(5),
+      fontSize: px(16),
       formatter(val) {
         return formatter(val)
       }

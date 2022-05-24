@@ -11,9 +11,10 @@ export const Chart4 = () => {
         type: "category",
         data: ["00:00", "01:30", "06:00", "07:30", "09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00", "19:30", "21:00", "22:30", "00:00"],
         axisLabel: {
-          fontSize: px(12),
+          margin: px(5),
+          fontSize: px(16),
           formatter(val) {
-            return parseInt(val) + "点"
+            return parseInt(val) + "\n点"
           }
         },
       },
@@ -21,7 +22,8 @@ export const Chart4 = () => {
       yAxis: {
         type: "value",
         axisLabel: {
-          fontSize: px(12),
+          margin: px(5),
+          fontSize: px(16),
           formatter: "{value}k"
         },
         axisPointer: {
@@ -58,13 +60,14 @@ export const Chart4 = () => {
             color: "#5470C6",
             width: px(5)
           },
-          data: [110, 80, 70, 90, 130, 120, 250, 310, 290, 210, 140, 190, 120, 250, 110],
+          data: [11, 8, 7, 9, 13, 12, 25, 31, 29, 21, 14, 19, 12, 25, 11],
           areaStyle: {},
           markArea: {
             label: {
-              color:"#fff",
-              textBorderColor:"#111",
-              textBorderWidth:px(4)
+              color: "#fff",
+              textBorderColor: "#111",
+              textBorderWidth: px(4),
+              fontSize: px(20)
             },
             data: [
               [
@@ -108,7 +111,7 @@ export const Chart4 = () => {
   return (
     <div className="trends-time chart-wrapper border">
       <h2 className="title-border">浏览时间趋势统计</h2>
-      <div ref={ref} className="chart">hi</div>
+      <div ref={ref} className="chart">加载中</div>
     </div>
   )
 }

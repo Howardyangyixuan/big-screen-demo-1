@@ -17,6 +17,10 @@ export const Chart7 = (props) => {
     const myChart = echarts.init(ref.current)
     const option = createEchartsOptions({
       legend: {
+        itemGap:px(10),
+        textStyle:{
+          fontSize:px(20)
+        },
         top: "bottom",
         left: "center",
         itemWidth: px(12),

@@ -19,19 +19,24 @@ export const Chart6 = () => {
       },
       toolbox: {
         show: true,
-        orient: 'vertical',
-        left: 'right',
-        top: 'center',
+        orient: "vertical",
+        left: "right",
+        top: "center",
         feature: {
-          dataView: { readOnly: false },
+          dataView: {readOnly: false},
           restore: {},
           saveAsImage: {}
-        }
+        },
+        itemSize: px(30),
+        itemGap: px(10)
       },
       textColor: {
         axisLine: {
           lineStyle: {color: "#FFF"}
         },
+      },
+      label:{
+        fontSize:px(16),
       },
       grid: {
         left: "10%",
@@ -90,25 +95,31 @@ export const Chart6 = () => {
           // lineStyle: {color: "#FFF"}
         },
         axisLabel: {
+          margin: px(15),
+          fontSize: px(20),
           formatter(val) {
             return val.substring(0, 2)
           }
         }
       },
       yAxis: {
+        axisLabel: {
+          margin: px(15),
+          fontSize: px(16),
+        },
         axisLine: {
           // lineStyle: {color: "#FFF"}
         },
       },
       series: [
         {
-          name:"用户人数",
+          name: "用户人数",
           type: "bar",
           emphasis: {
             focus: "self",
           },
           tooltip: {
-            formatter(val){
+            formatter(val) {
               return `${val.value.name} <br/> ${val.value.value}人`
             }
           }
@@ -121,7 +132,7 @@ export const Chart6 = () => {
           center: [105, 23],
           zoom: 1.2,
           scaleLimit: {
-            max: 4,
+            max: 8,
             min: 1
           },
           emphasis: {
@@ -141,8 +152,8 @@ export const Chart6 = () => {
         }
       ],
       visualMap: {
-        left: "80%",
-        bottom: "10%",
+        left: "right",
+        bottom: "5%",
         min: 1000,
         max: 10000,
         text: ["High", "Low"],
@@ -150,7 +161,14 @@ export const Chart6 = () => {
         calculable: true,
         inRange: {
           color: ["#5871c0", "#f3c2cb", "#fb607f"]
-        }
+        },
+        itemHeight: px(250),
+        align: "right",
+        itemWidth: px(40),
+        textGap: px(16),
+        textStyle: {
+          fontSize: px(20),
+        },
       },
     })
     myChart.setOption(option)

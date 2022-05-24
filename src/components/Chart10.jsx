@@ -17,7 +17,9 @@ export const Chart10 = () => {
           },
           restore: {},
           saveAsImage: {}
-        }
+        },
+        itemSize: px(30),
+        itemGap: px(10)
       },
       tooltip: {
         trigger: "axis",
@@ -36,9 +38,15 @@ export const Chart10 = () => {
         y2: "30%",
       },
       legend: {
+        itemGap: px(10),
+        textStyle: {
+          fontSize: px(20)
+        },
+        itemWidth: px(12),
+        itemHeight: px(12),
         data: ["播放量", "新增关注"],
         top: "5%",
-        left: "0%"
+        left: "5%"
       },
       dataZoom: [
         {
@@ -46,8 +54,8 @@ export const Chart10 = () => {
           realtime: true,
           start: 80,
           end: 100,
-          bottom:"5%",
-          height:"10%"
+          bottom: "5%",
+          height: "10%"
         },
         {
           type: "inside",
@@ -63,7 +71,10 @@ export const Chart10 = () => {
           axisLine: {onZero: false},
           data: data.dates.map(function (str) {
             return str.replace(" ", "\n")
-          })
+          }),
+          axisLabel: {
+            fontSize: px(16),
+          },
         }
       ],
       yAxis: [
@@ -79,7 +90,10 @@ export const Chart10 = () => {
               color: "rgba(255, 255, 255, 1)",
               width: 2
             }
-          }
+          },
+          axisLabel: {
+            fontSize: px(16),
+          },
         },
         {
           name: "",
@@ -88,7 +102,10 @@ export const Chart10 = () => {
           alignTicks: true,
           type: "value",
           min: 0,
-          max: 100
+          max: 100,
+          axisLabel: {
+            fontSize: px(16),
+          },
         }
       ],
       series: [

@@ -30,7 +30,12 @@ export const Chart5 = () => {
         }
       },
       legend: {
+        itemWidth: px(20),
+        itemHeight: px(20),
         top: px(250),
+        textStyle: {
+          fontSize: px(20)
+        },
         data: ["浏览量", "发布日期"],
       },
       calendar: [
@@ -42,8 +47,8 @@ export const Chart5 = () => {
           splitLine: {
             show: true,
             lineStyle: {
-              color: "#000",
-              width: px(3),
+              color: "white",
+              width: px(1),
               type: "solid"
             }
           },
@@ -51,6 +56,20 @@ export const Chart5 = () => {
             color: "#111",
             borderWidth: px(1),
             borderColor: "#111"
+          },
+          dayLabel: {
+            nameMap: "ZH",
+            fontSize: px(20),
+            margin: px(5)
+          },
+          monthLabel: {
+            nameMap: "ZH",
+            fontSize: px(20),
+            margin: px(5)
+          },
+          yearLabel: {
+            nameMap: "ZH",
+            fontSize: px(20)
           }
         },
       ],

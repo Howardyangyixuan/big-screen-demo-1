@@ -16,14 +16,20 @@ export const Chart3 = () => {
         x2: px(40),
         y2: px(40)
       },
-      legend: [
-        {data: ["旅行", "好物测评"]},
-        {data:["日常生活", "美食探店"],y:20}
-      ],
+      legend: {
+        textStyle: {
+          fontSize: px(20)
+        },
+        itemGap:px(15),
+        itemWidth: px(20),
+        itemHeight: px(20),
+      },
       toolbox: {
         feature: {
           saveAsImage: {}
-        }
+        },
+        itemSize: px(30)
+
       },
       xAxis: {
         type: "category",
@@ -62,7 +68,7 @@ export const Chart3 = () => {
   return (<div>
     <div className="trends-likes chart-wrapper border">
       <h2 className="title-border">点赞趋势按类别统计</h2>
-      <div className="chart" ref={ref}>hi</div>
+      <div className="chart" ref={ref}>加载中</div>
     </div>
   </div>)
 }

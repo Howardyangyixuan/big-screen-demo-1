@@ -1,6 +1,7 @@
 import * as echarts from "echarts"
 import {useEffect, useRef} from "react"
 import {createEchartsXYOptions} from "../shared/createEchartsXYOptions"
+import {px} from "../shared/fn"
 
 export const Chart1 = () => {
   const ref = useRef(null)
@@ -10,9 +11,24 @@ export const Chart1 = () => {
       xAxis: {
         type: "category",
         data: ["旅行", "好物测评", "日常生活", "美食探店"],
+        axisLabel: {
+          fontSize: px(16),
+          margin: px(5),
+          formatter(val) {
+            if (val.length > 2) {
+              const array = val.split("")
+              array.splice(2, 0, "\n")
+              return array.join("")
+            } else {
+              return val
+            }
+          }
+        },
       },
       yAxis: {
         axisLabel: {
+          fontSize: px(16),
+          margin: px(5),
           formatter: "{value}k"
         },
       },

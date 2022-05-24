@@ -68,7 +68,7 @@ export const Chart9 = (props) => {
       },
       toolbox: {
         ...settings.toolbox,
-        bottom: px(70),
+        bottom: px(60),
         feature: {
           myReplay: {
             show: true,
@@ -78,8 +78,10 @@ export const Chart9 = (props) => {
               animate()
             }
           },
-          saveAsImage: {}
-        }
+          saveAsImage: {},
+        },
+        itemSize: px(25),
+        itemGap: px(10)
       },
       title: {
         ...settings.title,
@@ -139,6 +141,7 @@ export const Chart9 = (props) => {
             position: settings.labelPosition,
             formatter: `{b}:{@[${dimensionX}]}`,
             valueAnimation: true,
+            fontSize: px(20),
             fontFamily: "monospace"
           }
         }
