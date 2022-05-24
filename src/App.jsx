@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Home/>}> </Route>
-        <Route exact path="/analysis" element={<Statistics/>}> </Route>
+        {/*<Route path="/" element={<Home/>}> </Route>*/}
+        <Route exact path="/data-visualization/" element={<Statistics/>}> </Route>
       </Routes>
       <footer>
         &copy;羊一圈技术有限公司 2021-2026
